@@ -32,4 +32,10 @@ base가 아닌 native에서 실행
     
  - "conda activate yolo"를 실행하여 yolo 가상환경으로 진입해서 pytorch, torchvosion을 설치하는 과정이다.
  - 결과 가상에서 설치 torch, torvosion 다운로드
+
 (yolo) dli@dli:~$
+
+    pip install -U pip wheel gdown
+
+    gdown https://drive.google.com/uc?
+
