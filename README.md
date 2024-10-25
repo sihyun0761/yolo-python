@@ -7,6 +7,8 @@
     wget https://github.com/Archiconda/build-tools/releases/download/0.2.3/Archiconda3-0.2.3-Linux-aarch64.sh
     sudo chmod 755 Archiconda3-0.2.3-Linux-aarch64.sh
     ls
+ - .sh 명령어는 쉘 스크립트를 실행하는 명령어로, 주로 자동화된 작업을 처리할 때 사용됩니다.
+ - wget 명령어는 터미널에서 파일을 웹에서 다운로드할 때 사용하는 명령어입니다.
 ##### 결과
 
   Archiconda3-0.2.3-Linux-aarch64.sh Pictures Desktop Public Documents Templates Downloads Videos examples.desktop yolov8_4gb Music
@@ -25,17 +27,81 @@ yes---> enter ---> yes in your /home/ldh/.bashrc ? [yes|no] [no] >>> yes
 ***
 base가 아닌 native에서 실행
 
-    conda create -n yolo python=3.8 -y
-    conda env list
+    conda deactivate
+ - 가상환경에서 빠져 나오는 명령어임
+   
+ ```
+conda create -n yolo python=3.8 -y
+conda env list
+conda activate yolo
+ ```
 
-    conda activate yolo
-    
  - "conda activate yolo"를 실행하여 yolo 가상환경으로 진입해서 pytorch, torchvosion을 설치하는 과정이다.
  - 결과 가상에서 설치 torch, torvosion 다운로드
+ - torch은 과학 계산과 머신러닝 알고리즘을 지원하는 프레임워크이며, 주로 PyTorch로 알려진 딥러닝 라이브러리에서 사용됩니다.
+ - Torchvosion은 PyTorch에서 컴퓨터 비전 작업을 쉽게 하기 위한 라이브러리로, 이미지 처리용 데이터셋, 모델, 전처리 도구를 제공합니다.
 
 (yolo) dli@dli:~$
+```
+pip install -U pip wheel gdown
+```
+```
+gdown https://drive.google.com/uc?id=1hs9HM0XJ2LPFghcn7ZMOs5qu5HexPXwM
+```
+사진1
+```
+gdown https://drive.google.com/uc?id=1m0d8ruUY8RvCP9eVjZw4Nc8LAwM8yuGV
+```
+사진2
+아래 두 라인을 실행(library 설치) 후 torch, torchvision은 확인이 가능하였다.
 
-    pip install -U pip wheel gdown
+```
+sudo apt-get install libopenblas-base libopenmpi-dev
+sudo apt-get install libomp-dev
+pip install torch-1.11.0a0+gitbc2c6ed-cp38-cp38-linux_aarch64.whl
+pip install torchvision-0.12.0a0+9b5a3fe-cp38-cp38-linux_aarch64.whl
+python -c "import torch; print(torch.__version__)"
+```
+```
+(yolo) dli@dli:~$ python
 
-    gdown https://drive.google.com/uc?
+>>> import torch
+>>> import torchvision
+>>> print(torch.__version__)
+>>> print(torchvision.__version__)
+>>> print("cuda used", torch.cuda.is_available())
+cuda used True
+>>> 
+```
+***
+```
+(yolo) dli@dli-desktop:~$ python
+Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
+[GCC 10.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+ >>> import torch
+ >>> import torchvision
+ >>> print(torch.__version__)
+1.11.0a0+gitbc2c6ed
+ >>> print(torchvision.__version__)
+0.12.0a0+9b5a3fe
+ >>> print("cuda used", torch.cuda.is_available())
+cuda used True
+ >>> 
+```
+***
+이렇게 떠야한다.
+위에서 true가 뜨면 ctrl + d 를 눌러서 탈출한다.
+
+```
+git clone https://github.com/Tory-Hwang/Jetson-Nano2
+```
+
+
+
+
+
+
+
+
 
