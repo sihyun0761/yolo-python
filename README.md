@@ -106,7 +106,14 @@ git clone https://github.com/Tory-Hwang/Jetson-Nano2
 (yolo) dli@jdli:~/Jetson-Nano2$ tree -L 2
 ```
  - 여기서 cd는 파일을 변경하는 명령어다.
-
+이 위에꺼는 굳이 안해도 된다.
+다 했으면 https://github.com/ultralytics/ultralytics?tab=readme-ov-file 이 링크에서
+YOLOv8n을 다운 받는다. 그리고 그 파일의 경로만 알아두면 된다.
+1. 내 컴퓨터
+2. Jetson-nano2
+3. V8
+4. detectY8.py
+5. brtsp = True 라고 되어있는 것을 brtsp = False로 바꾼다.
 
 
 
