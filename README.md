@@ -78,6 +78,7 @@ cuda used True
 ```
 ***
 ```
+이건 코드 아님
 (yolo) dli@dli-desktop:~$ python
 Python 3.8.13 | packaged by conda-forge | (default, Mar 25 2022, 05:56:18) 
 [GCC 10.3.0] on linux
@@ -90,7 +91,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 0.12.0a0+9b5a3fe
  >>> print("cuda used", torch.cuda.is_available())
 cuda used True
- >>> 
+ >>>
 ```
 ***
 이렇게 떠야한다.
